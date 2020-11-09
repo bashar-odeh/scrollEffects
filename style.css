@@ -1,0 +1,351 @@
+/*all Elements */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+section {
+    height: 90vh;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+
+/*navigation container*/
+
+.navigationContainer {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: block;
+    color: black;
+    background-color: white;
+    clip-path: circle(50px at 100% -30%);
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.closeMenue {
+    float: right;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    border: none;
+    font-size: 2rem;
+    margin-right: 2.5rem;
+    cursor: pointer;
+}
+
+.navigationContainer h3 {
+    float: left;
+    margin-left: 6rem;
+    font-size: 25px;
+    margin-top: 1rem;
+}
+
+.navigationPage {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.leftSide,
+.rightSide {
+    position: relative;
+}
+
+.navigationPage .leftSide,
+.navigationPage .rightSide {
+    font-size: 1.5rem;
+    margin-top: 5%;
+}
+
+.navigationPage .rightSide h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: 400;
+}
+
+.navigationPage .rightSide p {
+    overflow: hidden;
+    max-width: 400px;
+    font-weight: 400;
+}
+
+.navigationPage .leftSide ul {
+    list-style-type: none;
+    font-size: 3.5rem;
+    line-height: 8rem;
+    opacity: 0.8;
+}
+
+.navigationPage h3 {
+    height: 30px;
+    width: 100%;
+    margin-top: 0.6rem;
+}
+
+
+/*Navigaton bar */
+
+.navigate {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    flex-direction: row;
+    color: white;
+    min-height: 10vh;
+    z-index: 2;
+}
+
+.titleNav {
+    width: 5rem;
+    margin-top: 0.6rem;
+    font-size: 30px;
+    margin-left: 4rem;
+}
+
+.navtitle {
+    margin-top: 0.6rem;
+    font-size: 30px;
+    margin-left: 4rem;
+}
+
+.line1,
+.line2 {
+    width: 3rem;
+    height: 0.15rem;
+    margin: 0.2rem;
+    background: white;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.menue {
+    display: flex;
+    flex-direction: column;
+    width: 4rem;
+    height: 25px;
+    align-items: flex-end;
+    margin-top: 0.6rem;
+    margin-left: 4rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    pointer-events: all;
+    justify-content: center;
+}
+
+.header {
+    width: 100%;
+    align-items: flex-start;
+    margin: 5px 10px;
+}
+
+
+/*container1*/
+
+.container1 {
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+    pointer-events: all;
+    align-items: center;
+}
+
+.rightSide {
+    height: 450px;
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.rightSide img {
+    height: 350px;
+    width: 450px;
+    object-fit: cover;
+}
+
+.leftSide {
+    font-size: 1rem;
+}
+
+.leftSide p {
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.title {
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hike-explore,
+.forest-explore,
+.fashion-explore {
+    color: white;
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 250% 100%;
+    transition: all .5s ease;
+    padding: 0.5rem 1.2rem;
+    border: 3px solid white;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.hike-explore:hover,
+.forest-explore:hover,
+.fashion-explore:hover {
+    font-size: 1.24rem;
+    color: black;
+    background-position: -80% 0;
+}
+
+
+/*spans */
+
+.mountain-span {
+    color: rgb(86, 124, 228);
+}
+
+.hike-span {
+    color: rgb(167, 110, 231);
+}
+
+.fashion-span {
+    color: rgb(255, 139, 93);
+}
+
+
+/*Text reveals*/
+
+.slide {
+    background-color: black;
+}
+
+.reveal-text,
+.reveal-img {
+    width: 150%;
+    height: 150%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: -15%;
+    transition: all 0.5s;
+    overflow-x: hidden;
+}
+
+.cursor {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.5s ease;
+    transition-property: background, transform;
+    transform-origin: 90% 90%;
+    transform-origin: 90% 90%;
+}
+
+.scrollmagic-pin-spacer {
+    position: static !important;
+}
+
+.active-title-menue {
+    background-color: rgb(86, 124, 228);
+    transform: scale(2);
+}
+
+.active-explore {
+    background-color: white;
+    transform: scale(2);
+}
+
+.cursor-text {
+    position: absolute;
+    font-size: 1rem;
+    transform: translate(60%, 80%);
+    color: black;
+    font-size: 0.8rem;
+}
+
+.title-swipe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    mix-blend-mode: darken;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+}
+
+.t-swipe1 {
+    background-color: rgb(86, 124, 228);
+}
+
+.t-swipe2 {
+    background-color: rgb(167, 110, 231);
+}
+
+.t-swipe3 {
+    background-color: rgb(255, 139, 93)
+}
+
+.hike-section {
+    margin-top: 2%;
+}
+
+
+/* Fashion Page*/
+
+.model-1-name {
+    color: rgb(255, 139, 93);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+}
+
+.model-2-name {
+    color: rgb(167, 110, 231);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+}
+
+.model-3-name {
+    color: rgb(86, 124, 228);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+}
+
+.number {
+    font-size: 20rem;
+    color: rgba(255, 255, 255, 0.486);
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+.rightSide img {
+    object-fit: cover;
+    height: 300px;
+    object-position: top;
+}
